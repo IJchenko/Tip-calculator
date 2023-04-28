@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css" class="css">
+</head>
+<body>
+  <section class="content">
+    <div class="title">
+      <img src="images/logo.svg" alt="">
+    </div>
+    <div class="interface">
+      <div class="interface-wrap">
+      <div class="sector_bil">
+      <p class="title_bill">Bill</p>
+        <div class="sector_input-amount">
+          <img src="images/icon-dollar.svg" alt="" class="icon-in-input-label">
+          <input type="text" class="input-amount" placeholder="0" oninput="inputHandlerCount(this)">
+        </div>
+      </div>
+      <div class="sector_select-tip">
+        <p class="title_select-tip">Select Tip %</p>
+        <div class="buttons_percents">
+          <div class="grid-item g5 grid-item--active">
+            <p class="grid-item-text">5%</p>
+          </div>
+          <div class="grid-item g10 ">
+            <p class="grid-item-text">10%</p>
+          </div>
+          <div class="grid-item g15">
+            <p class="grid-item-text">15%</p>
+          </div>
+          <div class="grid-item g25 ">
+            <p class="grid-item-text">25%</p>
+          </div>
+          <div class="grid-item g50">
+            <p class="grid-item-text">50%</p>
+          </div>
+          <div class="grid-item g-custom">
+            <input type="text" class="button-custom-input grid-item-custom-text" placeholder="Custom" oninput="inputHandlerPercent(this)">
+          </div>
+        </div>
+      </div>
+      <div class="sector_number-of-people">
+      <p class="sector_number-of-people-p">Number of People</p>
+        <div class="sector_input-number-of-people">
+          <img src="images/icon-person.svg" alt="" class="icon-in-input-label">
+          <input type="text" class="input-number-of-people" placeholder="0" oninput="inputHandlerPeople(this)">
+        </div>
+      </div>
+      </div>
+      <div class="sector_result">
+        <div class="sector_result-wrapped">
+        <div class="tip-amount">
+          <div class="tip-amount-text">
+            <p class="tip-amount-text-p">Tip Amount</p>
+            <h1 class="subtext-person">/ person</h1>
+          </div>
+          <p class="result_tip-amount">$0</p>
+        </div>
+        <div class="total">
+          <div class="total-text">
+            <p class="total-text-p">Total</p>
+            <h1 class="subtext-person">/ person</h1>
+          </div>
+          <div>
+          <p class="result_total-person">$0</p>
+          </div>
+        </div>
+          <div class="button_reset">
+            <p class="button-text">GET</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <script src="app.js"></script>
+</body>
+</html>

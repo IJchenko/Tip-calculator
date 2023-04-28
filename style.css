@@ -1,0 +1,239 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+
+:root{
+    /*color*/
+    --cyan-1: hsl(189, 41%, 97%);
+    --cyan-2: hsl(185, 41%, 84%);
+    --cyan-3: hsl(184, 14%, 56%);
+    --cyan-4: hsl(186, 14%, 43%);
+    --cyan-5: hsl(183, 100%, 15%);
+    --cyan-6: hsl(172, 67%, 45%);
+    --error-1: hsl(0, 70%, 83%);
+    /*typhography*/
+    --famili-font: 'Space Mono', monospace;
+    --fs-base: 24px;
+    --fs-base-light: 16px;
+    --font-weight: 700px;
+    /*border*/
+    --radius-1: 1rem;
+    --radius-2: 0.5rem;
+}
+body{
+    background-color: var(--cyan-2);
+    margin: 0;
+    font-family: var(--famili-font);
+    font-size: var(--fs-base);
+}
+.content{
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(1, minmax(375px, 385px));
+}
+.title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+.interface{
+    background-color: white;
+    width: 100%;
+    border-radius: var(--radius-1);
+}
+.sector_bil, .sector_select-tip, .sector_number-of-people{
+    width: 100%;
+    padding: 2rem;
+}
+.title_bill, .title_select-tip, .sector_number-of-people-p {
+    margin: 0;
+    color: var(--cyan-4);
+    font-size: var(--fs-base-light);
+}
+.sector_input-amount, .sector_input-number-of-people{
+    margin-top: 0.5rem;
+    background-color: var(--cyan-1);
+    border-radius: var(--radius-2);
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 2.5rem;
+}
+.icon-in-input-label{
+    padding: 0.75rem 1rem;
+}
+.input-amount, .input-number-of-people{
+    outline: none;
+    border: none;
+    background-color: var(--cyan-1);
+    border-radius: var(--radius-2);
+    text-align: right;
+    padding: 0.75rem 1rem;
+    color: var(--cyan-5);
+    font-family: var(--famili-font);
+    font-size: var(--fs-base);
+    width: 100%;
+}
+
+.sector_select-tip, .sector_number-of-people, .sector_result{
+    padding-top: 0;
+}
+.buttons_percents{
+    padding-top: 0.75rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+}
+.grid-item{
+    background-color: var(--cyan-5);
+    border-radius: var(--radius-2);
+    height: 3rem;
+    align-items: center;
+}
+.grid-item:hover, .grid-item--active{
+    background-color: var(--cyan-6);
+}
+.grid-item-text{
+    margin: 0;
+    height: 3rem;
+    color: var(--cyan-1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.button-custom-input{
+    outline: none;
+    border: none;
+    width: 100%;
+    background-color: var(--cyan-1);
+    border-radius: inherit;
+    color: var(--cyan-4);
+}
+.grid-item-custom-text{
+    width: 100%;
+    height: 100%;
+    border-radius: 0.4rem;
+    color: var(--cyan-4);
+    font-family: var(--famili-font);
+    font-size: var(--fs-base);
+    text-align: center;
+}
+.sector_result{
+    width: 100%;
+    padding: 1.4rem;
+    padding-top: 0;
+}
+.sector_result-wrapped{
+    background-color: var(--cyan-5);
+    border-radius: var(--radius-2);
+}
+.tip-amount-text-p, .total-text-p{
+    margin: 0;
+    color: var(--cyan-1);
+    font-size: 18px;
+}
+.subtext-person, .button-text{
+    margin: 0;
+    color: var(--cyan-3);
+    font-size: 14px;
+}
+.tip-amount, .total{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem;
+}
+.tip-amount{
+    padding-bottom: 0;
+    padding-top: 2rem;
+}
+.result_tip-amount, .result_total-person{
+    margin: 0;
+    font-size: 32px;
+    color: var(--cyan-6);
+}
+.button_reset{
+    padding: 1.5rem;
+    padding-top: 0;
+}
+.button-text{
+    background-color: var(--cyan-6);
+    font-size: var(--famili-font);
+    font-size: var(--fs-base);
+    border-radius: var(--radius-2);
+    padding: 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--cyan-5);
+}
+.button-text:hover{
+    color: var(--cyan-1);
+}
+.error-input{
+    background-color: var(--error-1);
+}
+@media (min-width: 1440px) {
+    .content{
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        display: grid;
+        grid-template-rows: 300px 450px;
+    }
+    .title{
+        grid-column: 1 / span 3;
+        grid-row: 1;
+    }
+    .interface{
+        grid-column: 1 / span 3;
+        grid-row: 2;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 900px;
+    }
+    .sector_bil{
+        padding: 2.5rem 0 0 2.5rem;
+    }
+    .sector_select-tip{
+        padding: 2.5rem 0 0 2.5rem;
+    }
+    .sector_number-of-people{
+        padding: 2.5rem 0 2.5rem 2.5rem;
+    }
+    .sector_result{
+        width: 950px;
+        padding: 2.5rem 2.5rem 2.5rem 3rem;
+    }
+    .sector_result-wrapped{
+        height: 410px;
+        width: 400px;
+    }
+    .buttons_percents{
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .sector_input-amount, .sector_input-number-of-people{
+        height: 3rem;
+    }
+    .tip-amount{
+        padding: 3rem 2.5rem;
+    }
+    .total{
+        padding: 0 2.5rem 3rem 2.5rem;
+    }
+    .button_reset{
+        padding: 3.5rem 3rem 2.5rem 3rem;
+    }
+    .result_tip-amount, .result_total-person{
+        font-size: 40px;
+    }
+}
